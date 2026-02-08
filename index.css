@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'RedactionItalic';
+  src: url('/fonts/RedactionItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+.font-redaction-italic {
+  font-family: 'RedactionItalic', serif;
+  font-style: italic;
+}

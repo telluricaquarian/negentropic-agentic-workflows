@@ -131,7 +131,7 @@ const App: React.FC = () => {
           {/* Left Column: Workflow Visuals */}
           <div className="space-y-16 order-2 lg:order-1">
             <div className="space-y-4">
-              <span className="text-zinc-500 text-sm font-medium">Tts</span>
+              <img src="/images/tts-logo.png" alt="TTS" className="h-6 w-auto" />
               <h2 className="text-2xl font-light">Building & designing anew.</h2>
             </div>
 
@@ -168,7 +168,7 @@ const App: React.FC = () => {
           <div className="space-y-12 lg:sticky lg:top-24 order-1 lg:order-2">
             <div className="space-y-6">
               <h1 className="flex flex-col">
-                <span className="text-[#EFFF00] font-serif-italic text-3xl md:text-4xl lg:text-5xl tracking-tight">Negentropic</span>
+                <span className="text-[#EFFF00] font-redaction-italic text-3xl md:text-4xl lg:text-5xl tracking-tight">Negentropic</span>
                 <span className="text-white text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none mt-2">Agentic Workflows</span>
               </h1>
               <p className="text-zinc-400 text-lg leading-relaxed max-w-xl font-light">
@@ -192,7 +192,7 @@ const App: React.FC = () => {
             {/* Waitlist Section */}
             <div className="space-y-8 pt-8 border-t border-zinc-900">
               <div className="space-y-4">
-                <h2 className="text-[#EFFF00] font-serif-italic text-3xl">Join the waitlist</h2>
+                <h2 className="text-[#EFFF00] font-redaction-italic text-3xl">Join the waitlist</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed max-w-lg">
                   Your Website, alongside the workflows you selected and being needed and other business assets such as your social media will be inspected and appraised to identify how we may be able to provide value via the production and implementation of agentic workflows to relegate such flows to be able to work on those, thus saving you time, money & mental bandwidth.
                 </p>
