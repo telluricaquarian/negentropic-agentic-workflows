@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import { Play } from 'lucide-react';
 import { Canvas } from './components/ai-elements/canvas';
 import { Edge } from './components/ai-elements/edge';
 import {
@@ -180,12 +179,21 @@ const App: React.FC = () => {
 
             {/* Video Placeholder */}
             <div className="space-y-4">
-              <span className="text-sm text-zinc-500 font-medium uppercase tracking-widest">See how below:</span>
-              <div className="aspect-video w-full rounded-2xl border border-zinc-800 bg-zinc-900/50 flex items-center justify-center group cursor-pointer overflow-hidden relative">
-                <div className="absolute inset-0 bg-[url('https://picsum.photos/1200/800?grayscale')] bg-cover opacity-20 group-hover:scale-105 transition-transform duration-700" />
-                <div className="relative z-10 w-20 h-20 bg-[#EFFF00] rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(239,255,0,0.3)] group-hover:scale-110 transition-transform">
-                  <Play className="w-8 h-8 text-black fill-black ml-1" />
-                </div>
+              <div className="flex items-center gap-3">
+                <span className="text-sm text-zinc-500 font-medium uppercase tracking-widest">See how below:</span>
+                <span className="text-xs font-bold uppercase bg-[#EFFF00] text-black px-3 py-1 rounded-full">Coming Soon</span>
+              </div>
+              <div className="aspect-video w-full rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden relative">
+                <video
+                  className="absolute inset-0 w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                >
+                  <source src="/video/placeholder.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
 
