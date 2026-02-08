@@ -175,9 +175,6 @@ const App: React.FC = () => {
                 simply open the workflows up in your I.D.E and enter the provided prompts and Voilà the work is done for you
                 in almost and instant by via typing or simply dictating toward it (speech) your desired flow.
               </p>
-              <button className="md:hidden w-full bg-[#EFFF00] text-black font-bold py-4 px-12 rounded-full hover:bg-white transition-colors duration-300">
-                Join Waitlist
-              </button>
             </div>
 
             {/* Video Placeholder */}
@@ -239,6 +236,9 @@ const App: React.FC = () => {
                 </div>
               </div>
 
+              <button className="md:hidden w-full bg-[#EFFF00] text-black font-bold py-4 px-12 rounded-full hover:bg-white transition-colors duration-300">
+                Join Waitlist
+              </button>
               <button className="hidden md:block w-fit bg-[#EFFF00] text-black font-bold py-4 px-12 rounded-full hover:bg-white transition-colors duration-300">
                 Join Now
               </button>
