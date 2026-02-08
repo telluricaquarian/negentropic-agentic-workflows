@@ -158,7 +158,7 @@ const App: React.FC = () => {
           {/* Left Column: Workflow Visuals */}
           <div className="space-y-16 order-2 lg:order-1">
             <div className="space-y-4">
-              <img src="/images/tts-logo.png" alt="TTS" className="h-6 w-auto" />
+              <img src="/images/yellowttstopleftlogo.png" alt="TTS" className="h-6 w-auto" />
               <h2 className="text-2xl font-light">Building & designing anew.</h2>
             </div>
 
