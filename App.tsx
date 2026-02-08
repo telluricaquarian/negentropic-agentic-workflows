@@ -171,10 +171,13 @@ const App: React.FC = () => {
                 <span className="text-white text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none mt-2">Agentic Workflows</span>
               </h1>
               <p className="text-zinc-400 text-lg leading-relaxed max-w-xl font-light">
-                Self-Annealing Agentic Workflows built and designed by Llewellyn to make operations frictionless and seamless, 
-                simply open the workflows up in your I.D.E and enter the provided prompts and Voilà the work is done for you 
+                Self-Annealing Agentic Workflows built and designed by Llewellyn to make operations frictionless and seamless,
+                simply open the workflows up in your I.D.E and enter the provided prompts and Voilà the work is done for you
                 in almost and instant by via typing or simply dictating toward it (speech) your desired flow.
               </p>
+              <button className="md:hidden w-full bg-[#EFFF00] text-black font-bold py-4 px-12 rounded-full hover:bg-white transition-colors duration-300">
+                Join Waitlist
+              </button>
             </div>
 
             {/* Video Placeholder */}
