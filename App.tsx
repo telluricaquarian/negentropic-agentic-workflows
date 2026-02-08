@@ -158,7 +158,6 @@ const App: React.FC = () => {
           {/* Left Column: Workflow Visuals */}
           <div className="space-y-16 order-2 lg:order-1">
             <div className="space-y-4">
-              <img src="/images/tts-logo.png" alt="TTS" className="md:hidden fixed top-4 left-4 h-8 w-8 object-contain z-50 drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
               <img src="/images/yellowttstopleftlogo.png" alt="TTS" className="hidden md:block h-6 w-auto" />
               <h2 className="text-2xl font-light">Building & designing anew.</h2>
             </div>
@@ -195,6 +194,7 @@ const App: React.FC = () => {
           {/* Right Column: Copy and CTA */}
           <div className="space-y-12 lg:sticky lg:top-24 order-1 lg:order-2">
             <div className="space-y-6">
+              <img src="/images/tts-logo.png" alt="TTS" className="md:hidden h-8 w-8 object-contain drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
               <h1 className="flex flex-col">
                 <span className="text-[#EFFF00] font-redaction-italic text-3xl md:text-4xl lg:text-5xl tracking-tight">Negentropic</span>
                 <span className="text-white text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none mt-2">Agentic Workflows</span>
