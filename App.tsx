@@ -39,7 +39,7 @@ const nodes = [
       label: "Process Data",
     },
     id: nodeIds.process1,
-    position: { x: 500, y: 0 },
+    position: { x: 650, y: 0 },
     type: "workflow",
   },
   {
@@ -49,7 +49,7 @@ const nodes = [
       label: "Decision Point",
     },
     id: nodeIds.decision,
-    position: { x: 1000, y: 0 },
+    position: { x: 1300, y: 0 },
     type: "workflow",
   },
   {
@@ -59,7 +59,7 @@ const nodes = [
       label: "Success Path",
     },
     id: nodeIds.output1,
-    position: { x: 1500, y: -200 },
+    position: { x: 1950, y: -260 },
     type: "workflow",
   },
   {
@@ -69,7 +69,7 @@ const nodes = [
       label: "Error Path",
     },
     id: nodeIds.output2,
-    position: { x: 1500, y: 200 },
+    position: { x: 1950, y: 260 },
     type: "workflow",
   },
   {
@@ -79,7 +79,7 @@ const nodes = [
       label: "Complete",
     },
     id: nodeIds.process2,
-    position: { x: 2000, y: 0 },
+    position: { x: 2600, y: 0 },
     type: "workflow",
   },
 ];
@@ -158,7 +158,8 @@ const App: React.FC = () => {
           {/* Left Column: Workflow Visuals */}
           <div className="space-y-16 order-2 lg:order-1">
             <div className="space-y-4">
-              <img src="/images/yellowttstopleftlogo.png" alt="TTS" className="h-6 w-auto" />
+              <img src="/images/tts-logo.png" alt="TTS" className="md:hidden fixed top-4 left-4 h-8 w-8 object-contain z-50 drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
+              <img src="/images/yellowttstopleftlogo.png" alt="TTS" className="hidden md:block h-6 w-auto" />
               <h2 className="text-2xl font-light">Building & designing anew.</h2>
             </div>
 

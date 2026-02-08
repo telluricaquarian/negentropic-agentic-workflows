@@ -14,14 +14,14 @@ export const Canvas: React.FC<CanvasProps> = ({ nodes, edges, nodeTypes, edgeTyp
   const nodeWidth = 240;
   const nodeHeight = 120; // Estimated height for coordinate calculations
   const zoom = 0.4;
-  const visualScale = zoom * 2; // scale(0.8) applied to each node
+  const visualScale = zoom * 1.6; // scale(0.64) applied to each node
   const offsetX = 50;
   const offsetY = 250;
 
   return (
     <div className="w-full h-full relative dot-grid overflow-hidden bg-black/40 border border-[#222222] rounded-lg">
       <div className="absolute inset-0 p-4 overflow-auto scrollbar-hide">
-        <div className="relative" style={{ width: '1200px', height: '600px' }}>
+        <div className="relative" style={{ width: '1400px', height: '600px' }}>
           <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
             {edges.map((edge) => {
               const sourceNode = nodes.find(n => n.id === edge.source);
