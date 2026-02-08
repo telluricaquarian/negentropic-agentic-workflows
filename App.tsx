@@ -116,8 +116,36 @@ const edgeTypes = {
   temporary: Edge.Temporary,
 };
 
+const workflowOptions = [
+  'Automated Lead Scraping & Enrichment',
+  'Cold Outreach Agent (Email / LinkedIn)',
+  'Follow-Up & Reply Handling Agent',
+  'Lead Qualification & Scoring Agent',
+  'CRM Sync / Lead Routing Agent',
+  'Proposal Generator',
+  'Contract / SOP Generator',
+  'Market / Competitor Research Agent',
+  'Knowledge Base / RAG Agent',
+  'Content Repurposing Agent',
+  'Multi-Agent Orchestration System',
+  'Self-Healing (Self-Annealing) Workflow',
+  'Not sure yet \u2014 want guidance',
+];
+
 const App: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', site: '' });
+  const [selectedWorkflows, setSelectedWorkflows] = useState<string[]>([]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log({ ...formData, workflows: selectedWorkflows });
+  };
+
+  const toggleWorkflow = (option: string) => {
+    setSelectedWorkflows(prev =>
+      prev.includes(option) ? prev.filter(w => w !== option) : [...prev, option]
+    );
+  };
 
   return (
     <main className="min-h-screen bg-black text-white selection:bg-yellow-400 selection:text-black">
@@ -206,42 +234,68 @@ const App: React.FC = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="space-y-2">
-                  <input 
-                    type="text" 
-                    placeholder="Name:"
-                    className="w-full bg-black border border-zinc-800 rounded-full px-6 py-4 text-sm focus:border-[#EFFF00] focus:outline-none transition-colors"
-                    value={formData.name}
-                    onChange={e => setFormData({...formData, name: e.target.value})}
-                  />
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="space-y-2">
+                    <input
+                      type="text"
+                      placeholder="Name:"
+                      className="w-full bg-black border border-zinc-800 rounded-full px-6 py-4 text-sm focus:border-[#EFFF00] focus:outline-none transition-colors"
+                      value={formData.name}
+                      onChange={e => setFormData({...formData, name: e.target.value})}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <input
+                      type="email"
+                      placeholder="Email:"
+                      className="w-full bg-black border border-zinc-800 rounded-full px-6 py-4 text-sm focus:border-[#EFFF00] focus:outline-none transition-colors"
+                      value={formData.email}
+                      onChange={e => setFormData({...formData, email: e.target.value})}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <input
+                      type="text"
+                      placeholder="Site:"
+                      className="w-full bg-black border border-zinc-800 rounded-full px-6 py-4 text-sm focus:border-[#EFFF00] focus:outline-none transition-colors"
+                      value={formData.site}
+                      onChange={e => setFormData({...formData, site: e.target.value})}
+                    />
+                  </div>
                 </div>
-                <div className="space-y-2">
-                  <input 
-                    type="email" 
-                    placeholder="Email:"
-                    className="w-full bg-black border border-zinc-800 rounded-full px-6 py-4 text-sm focus:border-[#EFFF00] focus:outline-none transition-colors"
-                    value={formData.email}
-                    onChange={e => setFormData({...formData, email: e.target.value})}
-                  />
-                </div>
-                <div className="space-y-2">
-                  <input 
-                    type="text" 
-                    placeholder="Site:"
-                    className="w-full bg-black border border-zinc-800 rounded-full px-6 py-4 text-sm focus:border-[#EFFF00] focus:outline-none transition-colors"
-                    value={formData.site}
-                    onChange={e => setFormData({...formData, site: e.target.value})}
-                  />
-                </div>
-              </div>
 
-              <button className="md:hidden w-full bg-[#EFFF00] text-black font-bold py-4 px-12 rounded-full hover:bg-white transition-colors duration-300">
-                Join Waitlist
-              </button>
-              <button className="hidden md:block w-fit bg-[#EFFF00] text-black font-bold py-4 px-12 rounded-full hover:bg-white transition-colors duration-300">
-                Join Now
-              </button>
+                <div className="space-y-3">
+                  <p className="text-zinc-400 text-sm font-medium">
+                    Which agentic workflows are you interested in building? (Select all that apply)
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {workflowOptions.map(option => (
+                      <label
+                        key={option}
+                        className="flex items-start gap-3 cursor-pointer group"
+                      >
+                        <input
+                          type="checkbox"
+                          checked={selectedWorkflows.includes(option)}
+                          onChange={() => toggleWorkflow(option)}
+                          className="mt-1 accent-[#EFFF00] w-4 h-4 shrink-0"
+                        />
+                        <span className="text-zinc-400 text-sm group-hover:text-zinc-200 transition-colors">
+                          {option}
+                        </span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                <button type="submit" className="md:hidden w-full bg-[#EFFF00] text-black font-bold py-4 px-12 rounded-full hover:bg-white transition-colors duration-300">
+                  Join Waitlist
+                </button>
+                <button type="submit" className="hidden md:block w-fit bg-[#EFFF00] text-black font-bold py-4 px-12 rounded-full hover:bg-white transition-colors duration-300">
+                  Join Waitlist
+                </button>
+              </form>
             </div>
           </div>
         </div>
